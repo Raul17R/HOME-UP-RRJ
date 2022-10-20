@@ -15,9 +15,8 @@ function UserPage() {
       {/* <button className='btn'>HOME UP!</button> */}
       {/* <LogOutButton className="btn" /> */}
       <h3>Task:</h3>
-      <h3>Last Completed: </h3>
-      <h3>Next Due:</h3>
-      <h3>Log Completed Task:</h3>
+      <h3>Frecuency:</h3>
+      <h3>Description:</h3>
 
       
     </div>

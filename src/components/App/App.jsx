@@ -20,6 +20,8 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
+import Task from '../Task/Task.jsx';
+
 import './App.css';
 
 function App() {
@@ -81,6 +83,13 @@ function App() {
               <LoginPage />
             }
           </Route>
+
+          <ProtectedRoute
+          exact
+          path ="/task"
+          >
+            <Task />
+          </ProtectedRoute>
 
           <Route
             exact
