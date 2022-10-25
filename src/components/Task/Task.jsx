@@ -16,9 +16,10 @@ function Task() {
             dispatch({ type:'SET_TASK', payload: response.data})
         }).catch((error) => {
             console.log(error);
-            alert('Something went wring in fetch pets');
+            alert('Something went wrong in fetch task, task.jsx');
         });
     }
+
 
     return(
         <div>
