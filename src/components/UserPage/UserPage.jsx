@@ -23,6 +23,14 @@ function UserPage() {
     history.push('/addTask');
   }
 
+  const editTask = () => {
+    history.push('/editTask');
+  }
+
+  const completeTask = () => {
+    history.push('/completeTask');
+  }
+
   const fetchTask = () => {
     axios
       .get("/api/task")
@@ -56,8 +64,8 @@ function UserPage() {
                 <td>{task.frecuency}</td>
                 <td>{task.description}</td>
                 <td>
-                  <button>Complete</button>
-                  <button>Edit</button>
+                  <button onClick={completeTask}>Complete</button>
+                  <button onClick={editTask}> Edit</button>
                 </td>
               </tr>
             );

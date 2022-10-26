@@ -22,6 +22,8 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 
 import Task from '../Task/Task.jsx';
 import AddTask from '../AddTask/AddTask.jsx';
+import EditTask from '../EditTask/EditTask.jsx';
+import CompleteTask from '../CompleteTask/CompleteTask.jsx';
 
 import './App.css';
 
@@ -96,6 +98,18 @@ function App() {
           exact 
           path = "/addTask">
             <AddTask />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+          exact
+          path = "/editTask">
+            <EditTask />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+          exact
+          path = "/completeTask">
+            <CompleteTask />
           </ProtectedRoute>
 
           <Route

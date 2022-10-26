@@ -11,6 +11,11 @@ function AddTask() {
     const [newDescription, setNewDescription] = useState('');
     const taskList = useSelector((store) => store.taskList);
 
+
+    const editTask = () => {
+      history.push('/editTask');
+    }
+
     const fetchTask = () => {
         axios
           .get("/api/task")
@@ -63,8 +68,7 @@ function AddTask() {
                 <td>{task.frecuency}</td>
                 <td>{task.description}</td>
                 <td>
-                  
-                  <button>Edit Task</button>
+                  <button onClick={editTask}>Edit Task</button>
                 </td>
               </tr>
             );
