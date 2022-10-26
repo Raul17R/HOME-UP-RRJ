@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import Task from '../Task/Task.jsx';
+import AddTask from '../AddTask/AddTask.jsx';
 
 import './App.css';
 
@@ -89,6 +90,12 @@ function App() {
           path ="/task"
           >
             <Task />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+          exact 
+          path = "/addTask">
+            <AddTask />
           </ProtectedRoute>
 
           <Route

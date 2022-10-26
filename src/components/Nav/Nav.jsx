@@ -37,6 +37,10 @@ function Nav() {
               Info Page
             </Link>
 
+            {/* <Link className="navLink" to ="/addTask">
+              Add Task
+            </Link> Still thinking about this, button is kind of hidden to me*/}
+
             <LogOutButton className="navLink" />
           </>
         )}
