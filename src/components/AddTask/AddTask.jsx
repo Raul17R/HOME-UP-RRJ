@@ -63,8 +63,8 @@ function AddTask() {
                 <td>{task.frecuency}</td>
                 <td>{task.description}</td>
                 <td>
-                  <button>Complete</button>
-                  <button>Edit</button>
+                  
+                  <button>Edit Task</button>
                 </td>
               </tr>
             );
