@@ -10,6 +10,7 @@ function AddTask() {
   const [newFrequency, setNewFrecuency] = useState("");
   const [newDescription, setNewDescription] = useState("");
   const taskList = useSelector((store) => store.taskList);
+  const history = useHistory();
 
   const editTask = () => {
     history.push('/editTask');
