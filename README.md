@@ -123,4 +123,4 @@ Customize this ReadMe and the code comments in this project to read less like a 
 
 ## HOME UP
 
-1. Home Page
+- add a alert to let the user know that the tasnk was succesfully entered
