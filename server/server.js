@@ -11,6 +11,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const taskRouter = require('./routes/tasks.router');
 const addTaskRouter = require('./routes/addTask.router');
+const editTask = require ('./routes/editTask.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -27,6 +28,7 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/task', taskRouter);
 app.use('/api/addTask', addTaskRouter);
+app.use('/api/editTask', editTask);
 
 // Serve static files
 app.use(express.static('build'));

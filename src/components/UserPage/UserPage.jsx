@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 import "./UserPage.css";
 
@@ -14,17 +14,19 @@ function UserPage() {
   const history = useHistory();
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
+  const {id} = useParams(); 
 
   useEffect(() => {
     fetchTask();
+    // dispatch({type: ''})
   }, []);
 
   const addTaskButton = () =>{
     history.push('/addTask');
   }
 
-  const editTask = () => {
-    history.push('/editTask');
+  const editTask = (id) => {
+    history.push(`/editTask/${id}`);
   }
 
   const completeTask = () => {
@@ -65,7 +67,7 @@ function UserPage() {
                 <td>{task.description}</td>
                 <td>
                   <button onClick={completeTask}>Complete</button>
-                  <button onClick={editTask}> Edit</button>
+                  <button onClick={() => editTask(task.id)}> Edit</button>
                 </td>
               </tr>
             );

@@ -25,6 +25,7 @@ import AddTask from '../AddTask/AddTask.jsx';
 import EditTask from '../EditTask/EditTask.jsx';
 import CompleteTask from '../CompleteTask/CompleteTask.jsx';
 
+
 import './App.css';
 
 function App() {
@@ -99,10 +100,10 @@ function App() {
           path = "/addTask">
             <AddTask />
           </ProtectedRoute>
-
+          
           <ProtectedRoute
           exact
-          path = "/editTask">
+          path = "/editTask/:id">
             <EditTask />
           </ProtectedRoute>
 

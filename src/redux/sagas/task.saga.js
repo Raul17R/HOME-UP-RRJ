@@ -4,7 +4,7 @@ import {put, takeLatest} from "redux-saga/effects";
 function* fetchTask() {
     try {
         const config = {
-            headers: { 'Contrnt-Type' : 'application/json' },
+            headers: { 'Content-Type' : 'application/json' },
             withCredentials: true,
         }
         const taskList = yield axios.get('/api/task', config);
