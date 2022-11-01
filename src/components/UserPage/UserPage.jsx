@@ -1,11 +1,20 @@
-import React from "react";
+// import  from "react";
 // import LogOutButton from '../LogOutButton/LogOutButton';
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory, useParams } from "react-router-dom";
+import swal from 'sweetalert';
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
+// import Avatar from '@mui/material/Avatar';
+
+
 
 import "./UserPage.css";
+import { element } from "prop-types";
 
 function UserPage() {
   const taskList = useSelector((store) => store.taskList);
@@ -29,9 +38,38 @@ function UserPage() {
     history.push(`/editTask/${id}`);
   }
 
-  const completeTask = () => {
-    history.push('/completeTask');
+  const completeTask = (taskId) => {
+    // history.push('/completeTask');
+   
+    const elem = document.getElementById(taskId);
+    console.log(elem);
+    taskId === document.getElementById('id')
+      elem.parentNode.removeChild(elem);
+    
+    swal({
+      title: "Are you sure?",
+      text: "Are you sure you're done with this task?",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+      // button:"Done",
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Your Task has been completed!", {
+          icon: "success",
+        });
+      } else {
+        swal("Cancelled");
+      }
+    });
+  //  taskDone();
   }
+  
+  // const taskDone = () => {
+  //   const green = document.getElementById("taskDone");
+  //   element.className = "myClass";
+  // }
 
   const fetchTask = () => {
     axios
@@ -41,14 +79,15 @@ function UserPage() {
       })
       .catch((error) => {
         console.log(error);
-        alert("Something went wrong in fetch task, userPage.jsx");
+        // alert("Something went wrong in fetch task, userPage.jsx");
       });
   };
 
   return (
     <div className="container">
+      {/* <Avatar src="/broken-image.jpg" />{user.name} */}
       <h2>Welcome, {user.username}!</h2>
-      <button onClick={addTaskButton}>Add New Task</button>
+      <Button variant="contained" onClick={addTaskButton}>Add New Task</Button>
       <table className="simpleTable">
         <thead>
           <tr>
@@ -66,8 +105,12 @@ function UserPage() {
                 <td>{task.frecuency}</td>
                 <td>{task.description}</td>
                 <td>
-                  <button onClick={completeTask}>Complete</button>
-                  <button onClick={() => editTask(task.id)}> Edit</button>
+                  
+
+                  <Button variant="contained" id={task.id} onClick={() => completeTask (task.id)}>Complete</Button>
+                  <Button variant="outlined" onClick={() => editTask(task.id)}> Edit</Button> 
+                  {/* <p>Completed</p> */}
+          
                 </td>
               </tr>
             );

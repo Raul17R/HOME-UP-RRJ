@@ -17,6 +17,7 @@ CREATE TABLE "maintenance" (
 	"frecuency" VARCHAR (80),
 	"description" VARCHAR (255),
 	"user_id" INT REFERENCES "user" 
+	-- "completed" BOOLEAN
 	--USER ID
 );
 

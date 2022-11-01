@@ -6,9 +6,9 @@ const pool = require('../modules/pool');
 
 router.put('/:id', (req, res) =>{
     if(req.isAuthenticated()) {
-    const queryText = `UPDATE maintenance SET "task" = $1, "frecuency" = $2, "description" = $3
-    WHERE "id" = $4 AND "user_id" = $5`;
-    pool.query(queryText, [req.body.task, req.body.frecuency, req.body.description, req.params.id, req.user.id])
+    const queryText = `UPDATE "maintenance" SET "task" = $1, "frecuency" = $2, "description" = $3
+    WHERE "id" = $4`;
+    pool.query(queryText, [req.body.task, req.body.frecuency, req.body.description, req.params.id])
     .then(results => {
         res.sendStatus(200);
     }).catch(error => {

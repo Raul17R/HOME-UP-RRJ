@@ -119,12 +119,14 @@ input {
 .simpleTable {
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #020854;
+  border: 3px solid #020854;
   border-collapse: collapse;
+  
+  
 }
 
 .simpleTable td,
 .simpleTable th {
   padding: 8px;
-  border: 1px solid #020854;
+  border: 3px solid #377D8C;
 }
