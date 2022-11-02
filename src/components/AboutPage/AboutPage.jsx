@@ -18,6 +18,13 @@ function AboutPage() {
           <li>CSS</li>
           <li>HTML</li>
          </ul>
+         <h1>Thanks: </h1>
+         <ul>
+          <li>Prime Digital Academy</li>
+          <li>Family</li>
+          <li>Chris Black</li>
+          <li>Phrygian</li>
+         </ul>
       </div>
     </div>
   );
