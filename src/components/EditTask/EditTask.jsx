@@ -50,7 +50,7 @@ function EditTask() {
             <h2>Edit Task</h2>
             {/* <h1>{user}</h1>
             <h2>{id}</h2> */}
-
+       
             <form onSubmit={submitForm}>
                 <TextField variant="filled" value={task} onChange={(e) => setTask(e.target.value)}/>
                 <br />
@@ -60,6 +60,7 @@ function EditTask() {
 
                 <Button variant="contained" type="submit" >Submit</Button>
             </form>
+    
         </div>
     )
 }
