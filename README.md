@@ -1,4 +1,6 @@
-
+# HOME-UP
+Home-up was created to help home owners to keep track of their home maintenance.
+As we know home maintenance is really important to take good care of appliances and home structure. This app will help home owners to track maintenance done on each of their appliances and hopefully maintained, and take good care of their homes.
 # Prime Solo Project Starting Repo
 This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
 
