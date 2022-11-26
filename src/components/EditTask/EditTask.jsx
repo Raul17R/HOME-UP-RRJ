@@ -17,6 +17,7 @@ function EditTask() {
     const [task, setTask] = useState("");
     const [frecuency, setFrecuency] = useState("");
     const [description, setDescription] = useState("");
+    const history = useHistory();
     
 
 
